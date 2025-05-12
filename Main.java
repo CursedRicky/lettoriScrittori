@@ -1,14 +1,10 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Reader r = new Reader();
-        Writer w = new Writer();
-        Writer w2 = new Writer();
-        r.start();
-        w2.start();
-        w.start();
+        LettoriScrittori risorsa = new LettoriScrittori();
 
+        new Lettore(risorsa, "Lettore 1").start();
+        new Lettore(risorsa, "Lettore 2").start();
 
+        new Scrittore(risorsa, "Scrittore 1").start();
     }
 }
