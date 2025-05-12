@@ -10,6 +10,8 @@ public class Scrittore extends Thread {
     public void run() {
         try {
             risorsa.inizioScrittura(nome);
+            
+             // Faking del tempo di scrittura
             Thread.sleep(2000);
             risorsa.fineScrittura(nome);
         } catch (InterruptedException e) {
